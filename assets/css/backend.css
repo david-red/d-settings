@@ -1,0 +1,24 @@
+.ds-setting
+{
+	margin: 15px 0px;
+}
+
+.ds-label
+{
+	width: 20%;
+	float: left;
+	font-weight: bold;
+}
+
+.ds-label a
+{
+	font-weight: normal;
+	font-size: 10px;
+	color: #f00;
+}
+
+.ds-input
+{
+	width: 75%;
+	float: left;
+}
