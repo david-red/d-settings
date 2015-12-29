@@ -55,9 +55,8 @@ class DS_Backend
 			return;
 		}
 
-		$settings = settings_list();
-
-		$new_settings = array();
+		$settings       = settings_list();
+		$new_settings   = array();
 
 		foreach ( $settings as $setting )
 		{

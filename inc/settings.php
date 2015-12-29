@@ -7,10 +7,24 @@
 
 		foreach ( $settings as $setting )
 		{
+			$title      = $setting['title'];
+			$name       = $setting['name'];
+			$tooltip    = empty( $setting['tooltip'] ) ? '' : $setting['tooltip'];
+			$class      = empty( $setting['class'] ) ? '' : $setting['class'];
+
 			switch ( $setting['type'] )
 			{
 				case 'textarea':
-					DS_Form::textarea( $setting['title'], $setting['name'], $setting['tooltip'], $setting['class'], $setting['row'] );
+					DS_Form::textarea( $title, $name, $tooltip, $class, empty( $setting['row'] ) ? 5 : $setting['row'] );
+					break;
+				case 'text':
+					DS_Form::text( $title, $name, $tooltip, $class );
+					break;
+				case 'checkbox':
+					DS_Form::checkbox( $title, $name, $tooltip, $class );
+					break;
+				case 'select':
+					DS_Form::select( $title, $name, $setting['data'], $tooltip, $class );
 					break;
 			}
 		}

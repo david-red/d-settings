@@ -11,7 +11,7 @@ class DS_Form
 	 *
 	 * @return void
 	 */
-	public static function text_input( $title, $name, $tooltip = '', $class = '' )
+	public static function text( $title, $name, $tooltip = '', $class = '' )
 	{
 ?>
 		<div class="ds-setting clearfix">
@@ -90,6 +90,41 @@ class DS_Form
 			</div>
 		</div>
 		<?php
+	}
+
+	/**
+	 * Show select option
+	 *
+	 * @param string $title
+	 * @param string $name
+	 * @param array $data
+	 * @param string $tooltip
+	 * @param string $class
+	 *
+	 * @return void
+	 */
+	public static function select( $title, $name, $data, $tooltip = '', $class = '' )
+	{
+?>
+		<div class="ds-setting clearfix">
+			<?php self::label( $title, $tooltip ); ?>
+			<div class="ds-input">
+				<select name="<?php echo $name; ?>" <?php echo $class ? 'class="' . $class . '"' : ''; ?>>
+				<?php
+				foreach ( $data as $k => $v )
+				{
+					printf( '
+						<option value="%s" %s>%s</option>',
+						$k,
+						$k == sl_setting( $name ) ? 'selected="selected"' : '',
+						$v
+					);
+				}
+				?>
+				</select>
+			</div>
+		</div>
+<?php
 	}
 
 	/**

@@ -26,8 +26,29 @@ function settings_list()
 			'name'      => 'test11',
 			'type'      => 'textarea',
 			'tooltip'   => 'abc',
-			'class'     => '',
-			'row'       => 5,
+		),
+		array(
+			'title'     => __( 'Test 2', 'ds' ),
+			'name'      => 'test12',
+			'type'      => 'checkbox',
+			'tooltip'   => 'ef',
+		),
+		array(
+			'title'     => __( 'Test 3', 'ds' ),
+			'name'      => 'test13',
+			'type'      => 'text',
+			'tooltip'   => 'sfsf',
+		),
+		array(
+			'title'     => __( 'Test 4', 'ds' ),
+			'name'      => 'test14',
+			'type'      => 'select',
+			'tooltip'   => 'sfssfsff',
+			'data'      => array(
+				'1' => __( 'One', 'ds' ),
+				'2' => __( 'Two', 'ds' ),
+				'3' => __( 'Three', 'ds' )
+			),
 		),
 	);
 
