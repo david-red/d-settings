@@ -53,7 +53,7 @@ class DS_Form
 				printf( '
 						<input type="number" name="%s" value="%s" class="%s" min="%d" max="%d">',
 					$name,
-					empty( sl_setting( $name ) ) ? 0 : sl_setting( $name ),
+					sl_setting( $name ),
 					$class,
 					$min,
 					$max
