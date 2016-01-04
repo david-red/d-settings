@@ -14,6 +14,24 @@ function sl_setting( $name )
 }
 
 /**
+ * Update a setting
+ *
+ * @param string $name
+ * @param mixed $value
+ *
+ * @return void
+ */
+function update_setting( $name, $value )
+{
+	$settings = get_option( 'd-settings' );
+	if ( ! empty( $settings[$name] ) )
+	{
+		$settings[$name] = $value;
+		update_option( 'd-settings', $settings );
+	}
+}
+
+/**
  * Get settings list
  *
  * @return array
