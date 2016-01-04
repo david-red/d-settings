@@ -22,11 +22,20 @@ function settings_list()
 {
 	$settings = array(
 		array(
-			'title'     => __( 'Test 1', 'ds' ),
-			'name'      => 'test11',
+			'title'     => __( 'Footer Text', 'ds' ),
+			'name'      => 'footer_text',
 			'type'      => 'textarea',
-			'tooltip'   => 'abc',
+			'tooltip'   => __( 'Add text to footer area', 'ds' ),
 		),
+		array(
+			'title'     => __( 'Total Hit', 'ds' ),
+			'name'      => 'total_hit',
+			'type'      => 'number',
+			'tooltip'   => __( 'Total visits', 'ds' ),
+			'min'       => 0,
+			'max'       => 9999999,
+		),
+		/*
 		array(
 			'title'     => __( 'Test 2', 'ds' ),
 			'name'      => 'test12',
@@ -50,6 +59,7 @@ function settings_list()
 				'3' => __( 'Three', 'ds' )
 			),
 		),
+		*/
 	);
 
 	return $settings;

@@ -20,6 +20,9 @@
 				case 'text':
 					DS_Form::text( $title, $name, $tooltip, $class );
 					break;
+				case 'number':
+					DS_Form::number( $title, $name, $tooltip, $class, empty( $setting['min'] ) ? 0 : $setting['min'], empty( $setting['max'] ) ? 100 : $setting['max'] );
+					break;
 				case 'checkbox':
 					DS_Form::checkbox( $title, $name, $tooltip, $class );
 					break;

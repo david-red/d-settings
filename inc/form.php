@@ -32,6 +32,40 @@ class DS_Form
 	}
 
 	/**
+	 * Show number input
+	 *
+	 * @param string $title
+	 * @param string $name
+	 * @param string $tooltip
+	 * @param string $class
+	 * @param int $min
+	 * @param int $max
+	 *
+	 * @return void
+	 */
+	public static function number( $title, $name, $tooltip = '', $class = '', $min = 0, $max = 100 )
+	{
+		?>
+		<div class="ds-setting clearfix">
+			<?php self::label( $title, $tooltip ); ?>
+			<div class="ds-input">
+				<?php
+				printf( '
+						<input type="number" name="%s" value="%s" class="%s" min="%d" max="%d">',
+					$name,
+					empty( sl_setting( $name ) ) ? 0 : sl_setting( $name ),
+					$class,
+					$min,
+					$max
+				);
+				?>
+
+			</div>
+		</div>
+		<?php
+	}
+
+	/**
 	 * Show checkbox
 	 *
 	 * @param string $title
