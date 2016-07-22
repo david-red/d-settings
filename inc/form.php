@@ -63,6 +63,7 @@ class DS_Form
 			</div>
 		</div>
 		<?php
+		echo 'a';
 	}
 
 	/**
