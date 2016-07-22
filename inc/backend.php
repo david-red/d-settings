@@ -71,7 +71,6 @@ class DS_Backend
 		}
 
 		update_option( 'd-settings', $new_settings );
-		echo 'abc';
 	}
 }
 new DS_Backend;
