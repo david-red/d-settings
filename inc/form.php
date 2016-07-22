@@ -58,7 +58,6 @@ class DS_Form
 					$min,
 					$max
 				);
-				echo 'abc';
 				?>
 
 			</div>
